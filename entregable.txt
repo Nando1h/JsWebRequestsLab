@@ -1,0 +1,21 @@
+=== Paso 1 ===
+1. XMLHttpRequest: objeto nativo del navegador que permite hacer peticiones HTTP
+   asíncronas (AJAX) sin recargar la página.
+2. open(method, url, async): inicializa la petición indicando el método HTTP,
+   la URL y si es asíncrona (true). No la envía todavía.
+3. onload: manejador que se ejecuta cuando la petición termina. Permite leer
+   xhr.status y xhr.responseText para procesar la respuesta.
+4. Al escribir 'data' en la consola se muestra el objeto { json: [ ...productos ] }
+   (o null/vacío si aún no se ejecutó getData).
+
+=== Paso 2 ===
+'=> ' es la sintaxis de una función flecha (arrow function). Es una forma
+abreviada de declarar funciones: element => { ... } equivale a
+function(element) { ... }.
+
+=== Paso 3 ===
+- filter: recorre el arreglo y devuelve un NUEVO arreglo solo con los elementos
+  que cumplen la condición (el callback debe retornar true/false).
+- includes: método de strings que devuelve true si la cadena contiene la
+  subcadena buscada. Aquí comprueba si el title del producto contiene el texto
+  del input (búsqueda parcial).
